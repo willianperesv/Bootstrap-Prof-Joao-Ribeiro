@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document2</title>
+    <link rel="stylesheet" href="assets/bootstrap-min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="bg-dark text-white">
+
+<!-- MODAL -->
+    <!-- data-bs-backdrop="static" deixa o modal estático sai apenas clicando no ok -->
+    <div class="modal" tabindex="-1" id="myBox" data-bs-backdrop="static">
+      
+      <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-dark">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- END MODAL -->
+
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div class="col-6 offset-3">
+             <div>
+              <button onclick="mostrar_modal()">Mostrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <script src="assets/bootstrap-boundle-min.js" class="img-fluid"></script>
+    <script>
+      function mostrar_modal(){
+
+      
+       let my_box = document.getElementById('myBox');
+       let minha_modal = new bootstrap.Modal(my_box);
+       minha_modal.show();
+      }
+    </script>
+  </body>
+</html>

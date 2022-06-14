@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document2</title>
+    <link rel="stylesheet" href="assets/bootstrap-min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="bg-dark text-white">
+
+<!-- MODAL -->
+    <!-- data-bs-backdrop="static" deixa o modal estático sai apenas clicando no ok -->
+    <div class="modal fade" tabindex="-1" id="myBox" data-bs-backdrop="static">
+      
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-5 text-center">
+          <h2 class="text-dark">Content 1</h2>
+          <div class="text-center">
+            <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" id="myBox2" data-bs-backdrop="static">
+      
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-5 text-center">
+          <h2 class="text-dark">Content 2</h2>
+          <div class="text-center">
+            <button class="btn btn-primary" data-bs-dismiss="modal">Close2</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- END MODAL -->
+
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div class="col-6 offset-3">
+             <div>
+              <button onclick="mostrar_modal()">Mostrar</button>
+              <button onclick="mostrar_modal_2()">Mostrar2</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <script src="assets/bootstrap-boundle-min.js" class="img-fluid"></script>
+    <script>
+      function mostrar_modal(){
+
+       let minha_modal = new bootstrap.Modal(document.getElementById('myBox')).show();
+      }
+      function mostrar_modal_2(){
+
+      
+       let my_box = document.getElementById('myBox2');
+       let minha_modal = new bootstrap.Modal(my_box);
+       minha_modal.show();
+      }
+    </script>
+  </body>
+</html>
